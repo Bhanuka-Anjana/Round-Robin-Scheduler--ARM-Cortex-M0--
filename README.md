@@ -14,7 +14,7 @@ It runs **3 independent tasks** in a **round-robin** order using the **SysTick i
 - 🎥 Working demo video: `./media/demo.mp4` (or add your YouTube link here)
 
 - 🎬 Demo GIF:
-<img align="right" height="210px" width="450px" alt="Github" src="https://github.com/Bhanuka-Anjana/Round-Robin-Scheduler-Design/media/demo.gif" />
+<img alt="Github" src="https://github.com/Bhanuka-Anjana/Round-Robin-Scheduler-Design/media/demo.gif" />
 
 - 📈 Logic analyzer output:
   ![Logic analyzer output](./media/logic_analyzer.png)
