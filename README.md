@@ -9,17 +9,15 @@ It runs **3 independent tasks** in a **round-robin** order using the **SysTick i
 
 ---
 
-## Architecture
-
-![System Architecture](./media/architecture.png)
-
----
-
 ## Demo
 
 - 🎥 Working demo video: `./media/demo.mp4` (or add your YouTube link here)
-- 🎬 Demo GIF: `./media/demo.gif`
-- 📈 Logic analyzer output: `./media/logic_analyzer.png`
+
+- 🎬 Demo GIF:
+  ![Demo GIF](./media/demo.gif)
+
+- 📈 Logic analyzer output:
+  ![Logic analyzer output](./media/logic_analyzer.png)
 
 > You should see three different square waves on PB22/PB26/PB27 (different delays inside each task).
 
@@ -43,11 +41,7 @@ Each task has a **TCB (Task Control Block)**:
 - `TCB.sp`  → saved stack pointer (PSP) for that task  
 - `TCB.next` → pointer to the next task’s TCB
 
-So we create a ring:
+## Architecture
 
-```mermaid
-flowchart LR
-  T1[TCB1\nsp = Stack1\nnext = TCB2] --> T2[TCB2\nsp = Stack2\nnext = TCB3]
-  T2 --> T3[TCB3\nsp = Stack3\nnext = TCB1]
-  T3 --> T1
-  C[CurrentTCB] --> T1
+![System Architecture](./media/architecture.png)
+
