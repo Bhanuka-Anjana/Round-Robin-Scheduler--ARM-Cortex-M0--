@@ -1,4 +1,4 @@
-# Preemptive Round-Robin Scheduler (ARM Cortex-M0+) — MSPM0G3507 (Assembly)
+# Preemptive Round-Robin Scheduler
 
 A tiny **preemptive scheduler** written in **ARM assembly** for a **Cortex-M0+** MCU (TI MSPM0G3507).  
 It runs **3 independent tasks** in a **round-robin** order using the **SysTick interrupt** for periodic preemption.
@@ -6,20 +6,6 @@ It runs **3 independent tasks** in a **round-robin** order using the **SysTick i
 ✅ Each task toggles a different GPIO pin: **PB22, PB26, PB27**  
 ✅ Context switch saves/restores registers **R4–R11** manually  
 ✅ Hardware automatically stacks **R0–R3, R12, LR, PC, xPSR** (Cortex-M feature)
-
----
-
-## Demo
-
-- 🎥 Working demo video: `./media/demo.mp4` (or add your YouTube link here)
-
-- 🎬 Demo GIF:
-<img alt="Github" src="https://github.com/Bhanuka-Anjana/Round-Robin-Scheduler-Design/media/demo.gif" />
-
-- 📈 Logic analyzer output:
-  ![Logic analyzer output](./media/logic_analyzer.png)
-
-> You should see three different square waves on PB22/PB26/PB27 (different delays inside each task).
 
 ---
 
@@ -44,4 +30,15 @@ Each task has a **TCB (Task Control Block)**:
 ## Architecture
 
 ![System Architecture](./media/architecture.png)
+
+---
+
+## Demo
+- 🎬 Demo GIF:
+<img alt="Github" src="https://github.com/Bhanuka-Anjana/Round-Robin-Scheduler-Design/blob/main/media/demo.gif" />
+
+- 📈 Logic analyzer output:
+  ![Logic analyzer output](./media/logic_analyzer.png)
+
+> You should see three different square waves on PB22/PB26/PB27 (different delays inside each task).
 
